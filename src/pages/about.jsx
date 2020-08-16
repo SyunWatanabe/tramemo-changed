@@ -1,9 +1,22 @@
-import App from '../components/App'
+import MyApp from '../components/MyApp';
+import Button from '@material-ui/core/Button';
 
 export default function About() {
   return (
-    <App>
+    <MyApp>
       <p>About Page</p>
-    </App>
-  )
+      <Button variant="contained" color="primary">
+        Heoolo world
+      </Button>
+      <Button variant="contained" color="primary">
+        Heoolo world
+      </Button>
+      <Button variant="contained" color="primary">
+        Heoolo world
+      </Button>
+      <Button variant="contained" color="primary">
+        Heoolo world
+      </Button>
+    </MyApp>
+  );
 }

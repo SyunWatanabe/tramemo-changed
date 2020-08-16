@@ -1,8 +1,9 @@
 import MyApp from '../components/MyApp';
-export default function Home() {
+
+export default function Account() {
   return (
     <MyApp>
-      <p>Index Page</p>
+      <p>Account</p>
     </MyApp>
   );
 }

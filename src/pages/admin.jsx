@@ -1,8 +1,9 @@
 import MyApp from '../components/MyApp';
-export default function Home() {
+
+export default function Admin() {
   return (
     <MyApp>
-      <p>Index Page</p>
+      <p>Admin</p>
     </MyApp>
   );
 }
