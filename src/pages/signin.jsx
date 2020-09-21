@@ -115,14 +115,20 @@ export default function SignIn() {
     // backdrop open
     handleOpen();
 
-    const auth = firebaseApp.auth();
-    auth
-      .signInWithEmailAndPassword(email, password)
-      .then((authUser) => {
-        Router.push(ROUTES.MYPAGE);
-      })
-      .catch((error) => {
-        setError(error);
+    firebaseApp
+      .auth()
+      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+      .then(() => {
+        firebaseApp
+          .auth()
+          .signInWithEmailAndPassword(email, password)
+          .then((authUser) => {
+            Router.push(ROUTES.MYPAGE);
+          })
+          .catch((error) => {
+            setError(error);
+            handleClose();
+          });
       });
     event.preventDefault();
   };
