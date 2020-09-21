@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import App from 'next/app';
-import Firebase from '../components/Firebase';
+import Firebase from '../components/Firebase/firebase';
 export const FirebaseContext = React.createContext();
 export default class MyApp extends App {
   render() {
